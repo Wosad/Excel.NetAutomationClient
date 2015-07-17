@@ -7,8 +7,8 @@
     <ProjectGuid>{07B0C232-92B3-48F3-A975-8DBDAA12BF16}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Excel.NetAutomationClient</RootNamespace>
-    <AssemblyName>Excel.NetAutomationClient</AssemblyName>
+    <RootNamespace>Wosad.ExcelClient</RootNamespace>
+    <AssemblyName>Wosad.Excel.NetAutomationClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExcelApi">
+      <HintPath>..\packages\NetOffice.Excel.1.7.2.0\lib\net45\ExcelApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NetOffice">
+      <HintPath>..\packages\NetOffice.Core.1.7.2.0\lib\net45\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OfficeApi">
+      <HintPath>..\packages\NetOffice.Core.1.7.2.0\lib\net45\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -37,9 +49,25 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="VBIDEApi">
+      <HintPath>..\packages\NetOffice.Core.1.7.2.0\lib\net45\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelAddress.cs" />
+    <Compile Include="ExcelClientNetOffice.cs" />
+    <Compile Include="ExcelClientRead.cs" />
+    <Compile Include="ExcelClientWorksheets.cs" />
+    <Compile Include="ExcelClientWrite.cs" />
+    <Compile Include="ExcelEntry.cs" />
+    <Compile Include="ExcelInputReader.cs" />
+    <Compile Include="ExcelOutputEntry.cs" />
+    <Compile Include="IInputReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
