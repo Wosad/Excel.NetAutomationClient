@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.1.3-ALPHA122\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -110,7 +111,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Views\WosadIconGreen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Excel.NetAutomationClient\Excel.NetAutomationClient.csproj">
+      <Project>{07b0c232-92b3-48f3-a975-8dbdaa12bf16}</Project>
+      <Name>Excel.NetAutomationClient</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
